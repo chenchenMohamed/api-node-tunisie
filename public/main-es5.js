@@ -114,11 +114,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _realisations_realisations_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./realisations/realisations.component */
     "./src/app/realisations/realisations.component.ts");
+    /* harmony import */
+
+
+    var _services_enduitdecoratif_enduitdecoratif_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! ./services/enduitdecoratif/enduitdecoratif.component */
+    "./src/app/services/enduitdecoratif/enduitdecoratif.component.ts");
+    /* harmony import */
+
+
+    var _services_nettoyagetoiture_nettoyagetoiture_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! ./services/nettoyagetoiture/nettoyagetoiture.component */
+    "./src/app/services/nettoyagetoiture/nettoyagetoiture.component.ts");
+    /* harmony import */
+
+
+    var _services_renovationfacade_renovationfacade_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./services/renovationfacade/renovationfacade.component */
+    "./src/app/services/renovationfacade/renovationfacade.component.ts");
+    /* harmony import */
+
+
+    var _services_renovationinterieur_renovationinterieur_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    /*! ./services/renovationinterieur/renovationinterieur.component */
+    "./src/app/services/renovationinterieur/renovationinterieur.component.ts");
 
     var routes = [{
       path: '',
       redirectTo: 'accueil',
       pathMatch: "full"
+    }, {
+      path: 'Enduit-decoratif',
+      component: _services_enduitdecoratif_enduitdecoratif_component__WEBPACK_IMPORTED_MODULE_10__["EnduitdecoratifComponent"]
+    }, {
+      path: 'Nettoyage-toiture',
+      component: _services_nettoyagetoiture_nettoyagetoiture_component__WEBPACK_IMPORTED_MODULE_11__["NettoyagetoitureComponent"]
+    }, {
+      path: 'Renovation-facade',
+      component: _services_renovationfacade_renovationfacade_component__WEBPACK_IMPORTED_MODULE_12__["RenovationfacadeComponent"]
+    }, {
+      path: 'Renovation-interieur',
+      component: _services_renovationinterieur_renovationinterieur_component__WEBPACK_IMPORTED_MODULE_13__["RenovationinterieurComponent"]
     }, {
       path: 'accueil',
       component: _home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"]
@@ -256,6 +292,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {}
+        /*
+          private initFacebookService(): void {
+            const initParams: InitParams = {xfbml:true, version:'v3.2'};
+            this.facebookService.init(initParams);
+          }
+        */
+
+      }, {
+        key: "scrollTop",
+        value: function scrollTop() {
+          window.scrollTo(0, 0);
+        }
       }]);
 
       return AppComponent;
@@ -268,19 +316,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: AppComponent,
       selectors: [["app-root"]],
-      decls: 3,
+      decls: 6,
       vars: 0,
+      consts: [["id", "pagebody"], ["type", "button", 1, "btn", "btn-success", "btn-scroll-top", 3, "click"], [1, "fas", "fa-arrow-up"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-navbar");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "router-outlet");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-navbar");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "app-footer");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "router-outlet");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "app-footer");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "button", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_button_click_4_listener() {
+            return ctx.scrollTop();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "i", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
       },
       directives: [_components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_2__["NavbarComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"], _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_3__["FooterComponent"]],
-      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"]
+      styles: [".btn-scroll-top[_ngcontent-%COMP%]{\r\n  position:fixed;\r\n  bottom: 20px;\r\n  right: 20px; \r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFjO0VBQ2QsWUFBWTtFQUNaLFdBQVc7QUFDYiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJ0bi1zY3JvbGwtdG9we1xyXG4gIHBvc2l0aW9uOmZpeGVkO1xyXG4gIGJvdHRvbTogMjBweDtcclxuICByaWdodDogMjBweDsgXHJcbn0iXX0= */"]
     });
     /*@__PURE__*/
 
@@ -453,6 +516,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
     /*! ./components/sliderpage/sliderpage.component */
     "./src/app/components/sliderpage/sliderpage.component.ts");
+    /* harmony import */
+
+
+    var _services_enduitdecoratif_enduitdecoratif_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
+    /*! ./services/enduitdecoratif/enduitdecoratif.component */
+    "./src/app/services/enduitdecoratif/enduitdecoratif.component.ts");
+    /* harmony import */
+
+
+    var _services_nettoyagetoiture_nettoyagetoiture_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
+    /*! ./services/nettoyagetoiture/nettoyagetoiture.component */
+    "./src/app/services/nettoyagetoiture/nettoyagetoiture.component.ts");
+    /* harmony import */
+
+
+    var _services_renovationfacade_renovationfacade_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
+    /*! ./services/renovationfacade/renovationfacade.component */
+    "./src/app/services/renovationfacade/renovationfacade.component.ts");
+    /* harmony import */
+
+
+    var _services_renovationinterieur_renovationinterieur_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
+    /*! ./services/renovationinterieur/renovationinterieur.component */
+    "./src/app/services/renovationinterieur/renovationinterieur.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -472,7 +559,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"], _components_slider_slider_component__WEBPACK_IMPORTED_MODULE_5__["SliderComponent"], _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"], _home_components_aboute_home_aboute_home_component__WEBPACK_IMPORTED_MODULE_8__["AbouteHomeComponent"], _home_components_blog1_home_blog1_home_component__WEBPACK_IMPORTED_MODULE_9__["Blog1HomeComponent"], _home_components_blog2_home_blog2_home_component__WEBPACK_IMPORTED_MODULE_10__["Blog2HomeComponent"], _home_components_blog3_home_blog3_home_component__WEBPACK_IMPORTED_MODULE_11__["Blog3HomeComponent"], _home_components_blog4_home_blog4_home_component__WEBPACK_IMPORTED_MODULE_12__["Blog4HomeComponent"], _presentation_presentation_component__WEBPACK_IMPORTED_MODULE_13__["PresentationComponent"], _avantapres_avantapres_component__WEBPACK_IMPORTED_MODULE_14__["AvantapresComponent"], _images_images_component__WEBPACK_IMPORTED_MODULE_15__["ImagesComponent"], _services_services_component__WEBPACK_IMPORTED_MODULE_16__["ServicesComponent"], _demandedevis_demandedevis_component__WEBPACK_IMPORTED_MODULE_17__["DemandedevisComponent"], _contact_contact_component__WEBPACK_IMPORTED_MODULE_18__["ContactComponent"], _realisations_realisations_component__WEBPACK_IMPORTED_MODULE_19__["RealisationsComponent"], _home_components_partenaire_partenaire_component__WEBPACK_IMPORTED_MODULE_20__["PartenaireComponent"], _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_21__["SliderpageComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"], _components_slider_slider_component__WEBPACK_IMPORTED_MODULE_5__["SliderComponent"], _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"], _home_components_aboute_home_aboute_home_component__WEBPACK_IMPORTED_MODULE_8__["AbouteHomeComponent"], _home_components_blog1_home_blog1_home_component__WEBPACK_IMPORTED_MODULE_9__["Blog1HomeComponent"], _home_components_blog2_home_blog2_home_component__WEBPACK_IMPORTED_MODULE_10__["Blog2HomeComponent"], _home_components_blog3_home_blog3_home_component__WEBPACK_IMPORTED_MODULE_11__["Blog3HomeComponent"], _home_components_blog4_home_blog4_home_component__WEBPACK_IMPORTED_MODULE_12__["Blog4HomeComponent"], _presentation_presentation_component__WEBPACK_IMPORTED_MODULE_13__["PresentationComponent"], _avantapres_avantapres_component__WEBPACK_IMPORTED_MODULE_14__["AvantapresComponent"], _images_images_component__WEBPACK_IMPORTED_MODULE_15__["ImagesComponent"], _services_services_component__WEBPACK_IMPORTED_MODULE_16__["ServicesComponent"], _demandedevis_demandedevis_component__WEBPACK_IMPORTED_MODULE_17__["DemandedevisComponent"], _contact_contact_component__WEBPACK_IMPORTED_MODULE_18__["ContactComponent"], _realisations_realisations_component__WEBPACK_IMPORTED_MODULE_19__["RealisationsComponent"], _home_components_partenaire_partenaire_component__WEBPACK_IMPORTED_MODULE_20__["PartenaireComponent"], _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_21__["SliderpageComponent"], _services_enduitdecoratif_enduitdecoratif_component__WEBPACK_IMPORTED_MODULE_22__["EnduitdecoratifComponent"], _services_nettoyagetoiture_nettoyagetoiture_component__WEBPACK_IMPORTED_MODULE_23__["NettoyagetoitureComponent"], _services_renovationfacade_renovationfacade_component__WEBPACK_IMPORTED_MODULE_24__["RenovationfacadeComponent"], _services_renovationinterieur_renovationinterieur_component__WEBPACK_IMPORTED_MODULE_25__["RenovationinterieurComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"]]
       });
     })();
@@ -483,7 +570,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"], _components_slider_slider_component__WEBPACK_IMPORTED_MODULE_5__["SliderComponent"], _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"], _home_components_aboute_home_aboute_home_component__WEBPACK_IMPORTED_MODULE_8__["AbouteHomeComponent"], _home_components_blog1_home_blog1_home_component__WEBPACK_IMPORTED_MODULE_9__["Blog1HomeComponent"], _home_components_blog2_home_blog2_home_component__WEBPACK_IMPORTED_MODULE_10__["Blog2HomeComponent"], _home_components_blog3_home_blog3_home_component__WEBPACK_IMPORTED_MODULE_11__["Blog3HomeComponent"], _home_components_blog4_home_blog4_home_component__WEBPACK_IMPORTED_MODULE_12__["Blog4HomeComponent"], _presentation_presentation_component__WEBPACK_IMPORTED_MODULE_13__["PresentationComponent"], _avantapres_avantapres_component__WEBPACK_IMPORTED_MODULE_14__["AvantapresComponent"], _images_images_component__WEBPACK_IMPORTED_MODULE_15__["ImagesComponent"], _services_services_component__WEBPACK_IMPORTED_MODULE_16__["ServicesComponent"], _demandedevis_demandedevis_component__WEBPACK_IMPORTED_MODULE_17__["DemandedevisComponent"], _contact_contact_component__WEBPACK_IMPORTED_MODULE_18__["ContactComponent"], _realisations_realisations_component__WEBPACK_IMPORTED_MODULE_19__["RealisationsComponent"], _home_components_partenaire_partenaire_component__WEBPACK_IMPORTED_MODULE_20__["PartenaireComponent"], _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_21__["SliderpageComponent"]],
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"], _components_slider_slider_component__WEBPACK_IMPORTED_MODULE_5__["SliderComponent"], _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"], _home_components_aboute_home_aboute_home_component__WEBPACK_IMPORTED_MODULE_8__["AbouteHomeComponent"], _home_components_blog1_home_blog1_home_component__WEBPACK_IMPORTED_MODULE_9__["Blog1HomeComponent"], _home_components_blog2_home_blog2_home_component__WEBPACK_IMPORTED_MODULE_10__["Blog2HomeComponent"], _home_components_blog3_home_blog3_home_component__WEBPACK_IMPORTED_MODULE_11__["Blog3HomeComponent"], _home_components_blog4_home_blog4_home_component__WEBPACK_IMPORTED_MODULE_12__["Blog4HomeComponent"], _presentation_presentation_component__WEBPACK_IMPORTED_MODULE_13__["PresentationComponent"], _avantapres_avantapres_component__WEBPACK_IMPORTED_MODULE_14__["AvantapresComponent"], _images_images_component__WEBPACK_IMPORTED_MODULE_15__["ImagesComponent"], _services_services_component__WEBPACK_IMPORTED_MODULE_16__["ServicesComponent"], _demandedevis_demandedevis_component__WEBPACK_IMPORTED_MODULE_17__["DemandedevisComponent"], _contact_contact_component__WEBPACK_IMPORTED_MODULE_18__["ContactComponent"], _realisations_realisations_component__WEBPACK_IMPORTED_MODULE_19__["RealisationsComponent"], _home_components_partenaire_partenaire_component__WEBPACK_IMPORTED_MODULE_20__["PartenaireComponent"], _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_21__["SliderpageComponent"], _services_enduitdecoratif_enduitdecoratif_component__WEBPACK_IMPORTED_MODULE_22__["EnduitdecoratifComponent"], _services_nettoyagetoiture_nettoyagetoiture_component__WEBPACK_IMPORTED_MODULE_23__["NettoyagetoitureComponent"], _services_renovationfacade_renovationfacade_component__WEBPACK_IMPORTED_MODULE_24__["RenovationfacadeComponent"], _services_renovationinterieur_renovationinterieur_component__WEBPACK_IMPORTED_MODULE_25__["RenovationinterieurComponent"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"]],
           providers: [],
           bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
@@ -1848,9 +1935,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     SliderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: SliderComponent,
       selectors: [["app-slider"]],
-      decls: 41,
-      vars: 12,
-      consts: [[2, "position", "relative", "width", "100%"], [2, "position", "absolute", "height", "100%", "width", "100%", "top", "0px", "left", "0px", "background-color", "rgba(0, 0, 0, 0.507)"], [1, "conteneur-slider"], [1, "item-slider", "slider1"], [1, "container"], [1, "banner-info-bg"], [1, "mt-4", "pr-lg-4", 2, "color", "transparent"], [1, "btn", "btn-style", "btn-white", "mt-sm-5", "mt-4", 3, "routerLink"], [1, "btn", "btn-style", "btn-primary", "mt-sm-5", "mt-4", "mr-2", 3, "routerLink"], [1, "item-slider", "slider2"], [1, "item-slider", "slider3"], [2, "position", "absolute", "width", "100%", "height", "10%", "margin", "auto", "top", "0px", "bottom", "0px", "padding", "10px"], [1, "w3-button", "w3-display-left", 3, "click"], [1, "w3-button", "w3-display-right", 2, "float", "right", 3, "click"]],
+      decls: 52,
+      vars: 16,
+      consts: [[2, "position", "relative", "width", "100%"], [2, "position", "absolute", "height", "100%", "width", "100%", "top", "0px", "left", "0px", "background-color", "rgba(0, 0, 0, 0.507)"], [1, "conteneur-slider"], [1, "item-slider", "slider1"], [1, "container"], [1, "banner-info-bg"], [1, "mt-4", "pr-lg-4", 2, "color", "transparent"], [1, "btn", "btn-style", "btn-white", "mt-sm-5", "mt-4", 3, "routerLink"], [1, "btn", "btn-style", "btn-primary", "mt-sm-5", "mt-4", "mr-2", 3, "routerLink"], [1, "item-slider", "slider2"], [1, "item-slider", "slider3"], [1, "item-slider", "slider4"], [2, "position", "absolute", "width", "100%", "height", "10%", "margin", "auto", "top", "0px", "bottom", "0px", "padding", "10px"], [1, "w3-button", "w3-display-left", 3, "click"], [1, "w3-button", "w3-display-right", 2, "float", "right", 3, "click"]],
       template: function SliderComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -1867,7 +1954,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "h5");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Provide Effective Building Solutions");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Votre Satisfaction est notre priorit\xE9");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1903,7 +1990,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "h5");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Provide Effective Building Solutions");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Les particuliers et les professionneles parlent de nous");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1939,7 +2026,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "h5");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Provide Effective Building Solutions");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Votre maison de demain passe entre nos belles mains");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1969,23 +2056,59 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 11);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "button", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SliderComponent_Template_button_click_37_listener() {
-            return ctx.plusDivs(0 - 1);
-          });
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div", 5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "\u276E ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "h5");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Votre maison de demain passe entre nos belles mains");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "button", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "p", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SliderComponent_Template_button_click_39_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quisquam, doloremque placeat aut numquam ipsam. ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "a", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " Demande Devis");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "a", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, " Contact");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "button", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SliderComponent_Template_button_click_48_listener() {
+            return ctx.plusDivs(0 - 1);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, "\u276E ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "button", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SliderComponent_Template_button_click_50_listener() {
             return ctx.plusDivs(1 - 0);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "\u276F");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, "\u276F");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1998,14 +2121,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c0));
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](7, _c1));
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](8, _c0));
 
@@ -2020,10 +2135,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](11, _c1));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](12, _c0));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](13, _c1));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](14, _c0));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](15, _c1));
         }
       },
       directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"]],
-      styles: [".item-slider[_ngcontent-%COMP%]   img[_ngcontent-%COMP%]{\r\n    width: 100%;\r\n}\r\n\r\n.item-slider[_ngcontent-%COMP%]{\r\n    width: 100% !important;\r\n    transition: transform 1000ms ease-in-out;\r\n    position: relative;\r\n    flex-shrink: 0;\r\n}\r\n\r\n.conteneur-slider[_ngcontent-%COMP%]{\r\n    width: 100%; \r\n    overflow-x: hidden; \r\n    display: flex; \r\n    flex-direction: row; \r\n    flex-wrap: nowrap;\r\n}\r\n\r\n.w3-button[_ngcontent-%COMP%]{\r\n    font-size: 40px;\r\n    background-color: transparent;\r\n    border: none;\r\n    color: rgba(#ffffff, 0.8);\r\n    text-shadow: 1px 1px 1px #1f1e1e;\r\n    font-weight: 800;\r\n  }\r\n\r\n.w3-button[_ngcontent-%COMP%]:hover {\r\n    color: white;\r\n    text-shadow: 2px 2px 3px #1f1e1e;\r\n  }\r\n\r\n.banner-info-bg[_ngcontent-%COMP%]{\r\n      color: white;\r\n      margin: 200px auto;\r\n      margin-bottom: 150px;\r\n      max-width: 700px;\r\n      float:left;\r\n  }\r\n\r\nh5[_ngcontent-%COMP%]{\r\n  font-size: 85px;\r\n  line-height: 90px;\r\n  font-weight: 700;\r\n}\r\n\r\n@media (max-width: 1000px){\r\n    .banner-info-bg[_ngcontent-%COMP%]{\r\n      margin: 150px auto;\r\n      margin-bottom: 120px;\r\n    }\r\n\r\n    h5[_ngcontent-%COMP%]{\r\n      font-size: 50px;\r\n      line-height: 50px;\r\n    }\r\n  }\r\n\r\n@media (max-width: 750px){\r\n    .banner-info-bg[_ngcontent-%COMP%]{\r\n      margin: 100px auto;\r\n      margin-bottom: 80px;\r\n    }\r\n  }\r\n\r\n@media (max-width: 568px){\r\n    .banner-info-bg[_ngcontent-%COMP%]{\r\n      margin: 80px auto;\r\n      margin-bottom: 50px;\r\n    }\r\n  }\r\n\r\n.slider1[_ngcontent-%COMP%]{\r\n  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner1.jpg) center no-repeat;\r\n}\r\n\r\n.slider2[_ngcontent-%COMP%]{\r\n  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner2.jpg) center no-repeat;\r\n}\r\n\r\n.slider3[_ngcontent-%COMP%]{\r\n  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner3.jpg) center no-repeat;\r\n}\r\n\r\np[_ngcontent-%COMP%]{\r\n  font-size: 18px;\r\n  font-weight: 600;\r\n}\r\n\r\n.banner-info-bg[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]{\r\n  padding: 12px 36px;\r\n  font-size: 16px;\r\n  line-height: 26px;\r\n  font-weight: 600;\r\n  transition: 0.3s ease-in;\r\n  border-radius: 6px;\r\n  cursor: pointer !important;\r\n  font-family: 'Barlow', sans-serif;\r\n  color: #fff;\r\n  background-color: #fe5a0e;\r\n  border-color: #fe5a0e;\r\n  margin-right: 0.5rem !important;\r\n}\r\n\r\n.btn-white[_ngcontent-%COMP%]{\r\n  color:  #fe5a0e !important;\r\n  background-color: #fff !important;\r\n  border-color: #fe5a0e !important;\r\n}\r\n\r\nselect[_ngcontent-%COMP%]{\r\n  width: auto;\r\n  display: inline-flex;\r\n  margin-top: 3rem !important;\r\n  margin-right: 0.5rem !important;\r\n}\r\n\r\n.blog-demande-devis[_ngcontent-%COMP%]{\r\n  display: flex;\r\n  flex-direction: row;\r\n  flex-wrap: nowrap;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zbGlkZXIvc2xpZGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksV0FBVztBQUNmOztBQUVBO0lBQ0ksc0JBQXNCO0lBQ3RCLHdDQUF3QztJQUN4QyxrQkFBa0I7SUFDbEIsY0FBYztBQUNsQjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsNkJBQTZCO0lBQzdCLFlBQVk7SUFDWix5QkFBeUI7SUFDekIsZ0NBQWdDO0lBQ2hDLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLFlBQVk7SUFDWixnQ0FBZ0M7RUFDbEM7O0FBRUE7TUFDSSxZQUFZO01BQ1osa0JBQWtCO01BQ2xCLG9CQUFvQjtNQUNwQixnQkFBZ0I7TUFDaEIsVUFBVTtFQUNkOztBQUdGO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixnQkFBZ0I7QUFDbEI7O0FBRUU7SUFDRTtNQUNFLGtCQUFrQjtNQUNsQixvQkFBb0I7SUFDdEI7O0lBRUE7TUFDRSxlQUFlO01BQ2YsaUJBQWlCO0lBQ25CO0VBQ0Y7O0FBR0E7SUFDRTtNQUNFLGtCQUFrQjtNQUNsQixtQkFBbUI7SUFDckI7RUFDRjs7QUFFQTtJQUNFO01BQ0UsaUJBQWlCO01BQ2pCLG1CQUFtQjtJQUNyQjtFQUNGOztBQUdGO0VBQ0UsK0hBQStIO0FBQ2pJOztBQUVBO0VBQ0UsK0hBQStIO0FBQ2pJOztBQUVBO0VBQ0UsK0hBQStIO0FBQ2pJOztBQUdBO0VBQ0UsZUFBZTtFQUNmLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGdCQUFnQjtFQUNoQix3QkFBd0I7RUFDeEIsa0JBQWtCO0VBQ2xCLDBCQUEwQjtFQUMxQixpQ0FBaUM7RUFDakMsV0FBVztFQUNYLHlCQUF5QjtFQUN6QixxQkFBcUI7RUFDckIsK0JBQStCO0FBQ2pDOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLGlDQUFpQztFQUNqQyxnQ0FBZ0M7QUFDbEM7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsb0JBQW9CO0VBQ3BCLDJCQUEyQjtFQUMzQiwrQkFBK0I7QUFDakM7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2xpZGVyL3NsaWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5pdGVtLXNsaWRlciBpbWd7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLml0ZW0tc2xpZGVye1xyXG4gICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcclxuICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAxMDAwbXMgZWFzZS1pbi1vdXQ7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBmbGV4LXNocmluazogMDtcclxufVxyXG5cclxuLmNvbnRlbmV1ci1zbGlkZXJ7XHJcbiAgICB3aWR0aDogMTAwJTsgXHJcbiAgICBvdmVyZmxvdy14OiBoaWRkZW47IFxyXG4gICAgZGlzcGxheTogZmxleDsgXHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93OyBcclxuICAgIGZsZXgtd3JhcDogbm93cmFwO1xyXG59XHJcblxyXG4udzMtYnV0dG9ue1xyXG4gICAgZm9udC1zaXplOiA0MHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBjb2xvcjogcmdiYSgjZmZmZmZmLCAwLjgpO1xyXG4gICAgdGV4dC1zaGFkb3c6IDFweCAxcHggMXB4ICMxZjFlMWU7XHJcbiAgICBmb250LXdlaWdodDogODAwO1xyXG4gIH1cclxuICBcclxuICAudzMtYnV0dG9uOmhvdmVyIHtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHRleHQtc2hhZG93OiAycHggMnB4IDNweCAjMWYxZTFlO1xyXG4gIH1cclxuXHJcbiAgLmJhbm5lci1pbmZvLWJne1xyXG4gICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICAgIG1hcmdpbjogMjAwcHggYXV0bztcclxuICAgICAgbWFyZ2luLWJvdHRvbTogMTUwcHg7XHJcbiAgICAgIG1heC13aWR0aDogNzAwcHg7XHJcbiAgICAgIGZsb2F0OmxlZnQ7XHJcbiAgfVxyXG5cclxuICBcclxuaDV7XHJcbiAgZm9udC1zaXplOiA4NXB4O1xyXG4gIGxpbmUtaGVpZ2h0OiA5MHB4O1xyXG4gIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbn1cclxuXHJcbiAgQG1lZGlhIChtYXgtd2lkdGg6IDEwMDBweCl7XHJcbiAgICAuYmFubmVyLWluZm8tYmd7XHJcbiAgICAgIG1hcmdpbjogMTUwcHggYXV0bztcclxuICAgICAgbWFyZ2luLWJvdHRvbTogMTIwcHg7XHJcbiAgICB9XHJcblxyXG4gICAgaDV7XHJcbiAgICAgIGZvbnQtc2l6ZTogNTBweDtcclxuICAgICAgbGluZS1oZWlnaHQ6IDUwcHg7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuXHJcbiAgQG1lZGlhIChtYXgtd2lkdGg6IDc1MHB4KXtcclxuICAgIC5iYW5uZXItaW5mby1iZ3tcclxuICAgICAgbWFyZ2luOiAxMDBweCBhdXRvO1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiA4MHB4O1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgQG1lZGlhIChtYXgtd2lkdGg6IDU2OHB4KXtcclxuICAgIC5iYW5uZXItaW5mby1iZ3tcclxuICAgICAgbWFyZ2luOiA4MHB4IGF1dG87XHJcbiAgICAgIG1hcmdpbi1ib3R0b206IDUwcHg7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuXHJcbi5zbGlkZXIxe1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgwZGVnLCByZ2JhKDAsIDAsIDAsIDAuNDU5KSwgcmdiYSgwLCAwLCAwLCAwLjQyNSkpLCB1cmwoL2Fzc2V0cy9pbWFnZXMvYmFubmVyMS5qcGcpIGNlbnRlciBuby1yZXBlYXQ7XHJcbn1cclxuXHJcbi5zbGlkZXIye1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgwZGVnLCByZ2JhKDAsIDAsIDAsIDAuNDU5KSwgcmdiYSgwLCAwLCAwLCAwLjQyNSkpLCB1cmwoL2Fzc2V0cy9pbWFnZXMvYmFubmVyMi5qcGcpIGNlbnRlciBuby1yZXBlYXQ7XHJcbn1cclxuXHJcbi5zbGlkZXIze1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgwZGVnLCByZ2JhKDAsIDAsIDAsIDAuNDU5KSwgcmdiYSgwLCAwLCAwLCAwLjQyNSkpLCB1cmwoL2Fzc2V0cy9pbWFnZXMvYmFubmVyMy5qcGcpIGNlbnRlciBuby1yZXBlYXQ7XHJcbn1cclxuXHJcblxyXG5we1xyXG4gIGZvbnQtc2l6ZTogMThweDtcclxuICBmb250LXdlaWdodDogNjAwO1xyXG59XHJcblxyXG4uYmFubmVyLWluZm8tYmcgYXtcclxuICBwYWRkaW5nOiAxMnB4IDM2cHg7XHJcbiAgZm9udC1zaXplOiAxNnB4O1xyXG4gIGxpbmUtaGVpZ2h0OiAyNnB4O1xyXG4gIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbiAgdHJhbnNpdGlvbjogMC4zcyBlYXNlLWluO1xyXG4gIGJvcmRlci1yYWRpdXM6IDZweDtcclxuICBjdXJzb3I6IHBvaW50ZXIgIWltcG9ydGFudDtcclxuICBmb250LWZhbWlseTogJ0JhcmxvdycsIHNhbnMtc2VyaWY7XHJcbiAgY29sb3I6ICNmZmY7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZlNWEwZTtcclxuICBib3JkZXItY29sb3I6ICNmZTVhMGU7XHJcbiAgbWFyZ2luLXJpZ2h0OiAwLjVyZW0gIWltcG9ydGFudDtcclxufVxyXG5cclxuLmJ0bi13aGl0ZXtcclxuICBjb2xvcjogICNmZTVhMGUgIWltcG9ydGFudDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XHJcbiAgYm9yZGVyLWNvbG9yOiAjZmU1YTBlICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbnNlbGVjdHtcclxuICB3aWR0aDogYXV0bztcclxuICBkaXNwbGF5OiBpbmxpbmUtZmxleDtcclxuICBtYXJnaW4tdG9wOiAzcmVtICFpbXBvcnRhbnQ7XHJcbiAgbWFyZ2luLXJpZ2h0OiAwLjVyZW0gIWltcG9ydGFudDtcclxufVxyXG5cclxuLmJsb2ctZGVtYW5kZS1kZXZpc3tcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgZmxleC13cmFwOiBub3dyYXA7XHJcbn0iXX0= */"]
+      styles: [".item-slider[_ngcontent-%COMP%]   img[_ngcontent-%COMP%]{\r\n    width: 100%;\r\n}\r\n\r\n.item-slider[_ngcontent-%COMP%]{\r\n    width: 100% !important;\r\n    transition: transform 1000ms ease-in-out;\r\n    position: relative;\r\n    flex-shrink: 0;\r\n}\r\n\r\n.conteneur-slider[_ngcontent-%COMP%]{\r\n    width: 100%; \r\n    overflow-x: hidden; \r\n    display: flex; \r\n    flex-direction: row; \r\n    flex-wrap: nowrap;\r\n}\r\n\r\n.w3-button[_ngcontent-%COMP%]{\r\n    font-size: 40px;\r\n    background-color: transparent;\r\n    border: none;\r\n    color: rgba(#ffffff, 0.8);\r\n    text-shadow: 1px 1px 1px #1f1e1e;\r\n    font-weight: 800;\r\n  }\r\n\r\n.w3-button[_ngcontent-%COMP%]:hover {\r\n    color: white;\r\n    text-shadow: 2px 2px 3px #1f1e1e;\r\n  }\r\n\r\n.banner-info-bg[_ngcontent-%COMP%]{\r\n      color: white;\r\n      margin: 200px auto;\r\n      margin-bottom: 150px;\r\n      max-width: 700px;\r\n      float:left;\r\n  }\r\n\r\nh5[_ngcontent-%COMP%]{\r\n  font-size: 85px;\r\n  line-height: 90px;\r\n  font-weight: 700;\r\n}\r\n\r\n@media (max-width: 1000px){\r\n    .banner-info-bg[_ngcontent-%COMP%]{\r\n      margin: 150px auto;\r\n      margin-bottom: 120px;\r\n    }\r\n\r\n    h5[_ngcontent-%COMP%]{\r\n      font-size: 50px;\r\n      line-height: 50px;\r\n    }\r\n  }\r\n\r\n@media (max-width: 750px){\r\n    .banner-info-bg[_ngcontent-%COMP%]{\r\n      margin: 100px auto;\r\n      margin-bottom: 80px;\r\n    }\r\n  }\r\n\r\n@media (max-width: 568px){\r\n    .banner-info-bg[_ngcontent-%COMP%]{\r\n      margin: 80px auto;\r\n      margin-bottom: 50px;\r\n    }\r\n  }\r\n\r\n.slider1[_ngcontent-%COMP%]{\r\n  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner1.jpg) center no-repeat;\r\n}\r\n\r\n.slider2[_ngcontent-%COMP%]{\r\n  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner2.jpg) center no-repeat;\r\n}\r\n\r\n.slider3[_ngcontent-%COMP%]{\r\n  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner3.jpg) center no-repeat;\r\n}\r\n\r\n.slider4[_ngcontent-%COMP%]{\r\n  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/banner4.jpg) center no-repeat;\r\n}\r\n\r\n.slider5[_ngcontent-%COMP%]{\r\n  background: linear-gradient(0deg, rgba(0, 0, 0, 0.459), rgba(0, 0, 0, 0.425)), url(/assets/images/renovation_de_facade/243140707_400781178296405_5815398119265706037_n.jpg) center no-repeat;\r\n}\r\n\r\np[_ngcontent-%COMP%]{\r\n  font-size: 18px;\r\n  font-weight: 600;\r\n}\r\n\r\n.banner-info-bg[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]{\r\n  padding: 12px 36px;\r\n  font-size: 16px;\r\n  line-height: 26px;\r\n  font-weight: 600;\r\n  transition: 0.3s ease-in;\r\n  border-radius: 6px;\r\n  cursor: pointer !important;\r\n  font-family: 'Barlow', sans-serif;\r\n  color: #fff;\r\n  background-color: #fe5a0e;\r\n  border-color: #fe5a0e;\r\n  margin-right: 0.5rem !important;\r\n}\r\n\r\n.btn-white[_ngcontent-%COMP%]{\r\n  color:  #fe5a0e !important;\r\n  background-color: #fff !important;\r\n  border-color: #fe5a0e !important;\r\n}\r\n\r\nselect[_ngcontent-%COMP%]{\r\n  width: auto;\r\n  display: inline-flex;\r\n  margin-top: 3rem !important;\r\n  margin-right: 0.5rem !important;\r\n}\r\n\r\n.blog-demande-devis[_ngcontent-%COMP%]{\r\n  display: flex;\r\n  flex-direction: row;\r\n  flex-wrap: nowrap;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zbGlkZXIvc2xpZGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksV0FBVztBQUNmOztBQUVBO0lBQ0ksc0JBQXNCO0lBQ3RCLHdDQUF3QztJQUN4QyxrQkFBa0I7SUFDbEIsY0FBYztBQUNsQjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsNkJBQTZCO0lBQzdCLFlBQVk7SUFDWix5QkFBeUI7SUFDekIsZ0NBQWdDO0lBQ2hDLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLFlBQVk7SUFDWixnQ0FBZ0M7RUFDbEM7O0FBRUE7TUFDSSxZQUFZO01BQ1osa0JBQWtCO01BQ2xCLG9CQUFvQjtNQUNwQixnQkFBZ0I7TUFDaEIsVUFBVTtFQUNkOztBQUdGO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQixnQkFBZ0I7QUFDbEI7O0FBRUU7SUFDRTtNQUNFLGtCQUFrQjtNQUNsQixvQkFBb0I7SUFDdEI7O0lBRUE7TUFDRSxlQUFlO01BQ2YsaUJBQWlCO0lBQ25CO0VBQ0Y7O0FBR0E7SUFDRTtNQUNFLGtCQUFrQjtNQUNsQixtQkFBbUI7SUFDckI7RUFDRjs7QUFFQTtJQUNFO01BQ0UsaUJBQWlCO01BQ2pCLG1CQUFtQjtJQUNyQjtFQUNGOztBQUdGO0VBQ0UsK0hBQStIO0FBQ2pJOztBQUVBO0VBQ0UsK0hBQStIO0FBQ2pJOztBQUVBO0VBQ0UsK0hBQStIO0FBQ2pJOztBQUVBO0VBQ0UsK0hBQStIO0FBQ2pJOztBQUVBO0VBQ0UsNExBQTRMO0FBQzlMOztBQUdBO0VBQ0UsZUFBZTtFQUNmLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGdCQUFnQjtFQUNoQix3QkFBd0I7RUFDeEIsa0JBQWtCO0VBQ2xCLDBCQUEwQjtFQUMxQixpQ0FBaUM7RUFDakMsV0FBVztFQUNYLHlCQUF5QjtFQUN6QixxQkFBcUI7RUFDckIsK0JBQStCO0FBQ2pDOztBQUVBO0VBQ0UsMEJBQTBCO0VBQzFCLGlDQUFpQztFQUNqQyxnQ0FBZ0M7QUFDbEM7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsb0JBQW9CO0VBQ3BCLDJCQUEyQjtFQUMzQiwrQkFBK0I7QUFDakM7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLGlCQUFpQjtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2xpZGVyL3NsaWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5pdGVtLXNsaWRlciBpbWd7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLml0ZW0tc2xpZGVye1xyXG4gICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcclxuICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAxMDAwbXMgZWFzZS1pbi1vdXQ7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBmbGV4LXNocmluazogMDtcclxufVxyXG5cclxuLmNvbnRlbmV1ci1zbGlkZXJ7XHJcbiAgICB3aWR0aDogMTAwJTsgXHJcbiAgICBvdmVyZmxvdy14OiBoaWRkZW47IFxyXG4gICAgZGlzcGxheTogZmxleDsgXHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93OyBcclxuICAgIGZsZXgtd3JhcDogbm93cmFwO1xyXG59XHJcblxyXG4udzMtYnV0dG9ue1xyXG4gICAgZm9udC1zaXplOiA0MHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBjb2xvcjogcmdiYSgjZmZmZmZmLCAwLjgpO1xyXG4gICAgdGV4dC1zaGFkb3c6IDFweCAxcHggMXB4ICMxZjFlMWU7XHJcbiAgICBmb250LXdlaWdodDogODAwO1xyXG4gIH1cclxuICBcclxuICAudzMtYnV0dG9uOmhvdmVyIHtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHRleHQtc2hhZG93OiAycHggMnB4IDNweCAjMWYxZTFlO1xyXG4gIH1cclxuXHJcbiAgLmJhbm5lci1pbmZvLWJne1xyXG4gICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICAgIG1hcmdpbjogMjAwcHggYXV0bztcclxuICAgICAgbWFyZ2luLWJvdHRvbTogMTUwcHg7XHJcbiAgICAgIG1heC13aWR0aDogNzAwcHg7XHJcbiAgICAgIGZsb2F0OmxlZnQ7XHJcbiAgfVxyXG5cclxuICBcclxuaDV7XHJcbiAgZm9udC1zaXplOiA4NXB4O1xyXG4gIGxpbmUtaGVpZ2h0OiA5MHB4O1xyXG4gIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbn1cclxuXHJcbiAgQG1lZGlhIChtYXgtd2lkdGg6IDEwMDBweCl7XHJcbiAgICAuYmFubmVyLWluZm8tYmd7XHJcbiAgICAgIG1hcmdpbjogMTUwcHggYXV0bztcclxuICAgICAgbWFyZ2luLWJvdHRvbTogMTIwcHg7XHJcbiAgICB9XHJcblxyXG4gICAgaDV7XHJcbiAgICAgIGZvbnQtc2l6ZTogNTBweDtcclxuICAgICAgbGluZS1oZWlnaHQ6IDUwcHg7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuXHJcbiAgQG1lZGlhIChtYXgtd2lkdGg6IDc1MHB4KXtcclxuICAgIC5iYW5uZXItaW5mby1iZ3tcclxuICAgICAgbWFyZ2luOiAxMDBweCBhdXRvO1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiA4MHB4O1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgQG1lZGlhIChtYXgtd2lkdGg6IDU2OHB4KXtcclxuICAgIC5iYW5uZXItaW5mby1iZ3tcclxuICAgICAgbWFyZ2luOiA4MHB4IGF1dG87XHJcbiAgICAgIG1hcmdpbi1ib3R0b206IDUwcHg7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuXHJcbi5zbGlkZXIxe1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgwZGVnLCByZ2JhKDAsIDAsIDAsIDAuNDU5KSwgcmdiYSgwLCAwLCAwLCAwLjQyNSkpLCB1cmwoL2Fzc2V0cy9pbWFnZXMvYmFubmVyMS5qcGcpIGNlbnRlciBuby1yZXBlYXQ7XHJcbn1cclxuXHJcbi5zbGlkZXIye1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgwZGVnLCByZ2JhKDAsIDAsIDAsIDAuNDU5KSwgcmdiYSgwLCAwLCAwLCAwLjQyNSkpLCB1cmwoL2Fzc2V0cy9pbWFnZXMvYmFubmVyMi5qcGcpIGNlbnRlciBuby1yZXBlYXQ7XHJcbn1cclxuXHJcbi5zbGlkZXIze1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgwZGVnLCByZ2JhKDAsIDAsIDAsIDAuNDU5KSwgcmdiYSgwLCAwLCAwLCAwLjQyNSkpLCB1cmwoL2Fzc2V0cy9pbWFnZXMvYmFubmVyMy5qcGcpIGNlbnRlciBuby1yZXBlYXQ7XHJcbn1cclxuXHJcbi5zbGlkZXI0e1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgwZGVnLCByZ2JhKDAsIDAsIDAsIDAuNDU5KSwgcmdiYSgwLCAwLCAwLCAwLjQyNSkpLCB1cmwoL2Fzc2V0cy9pbWFnZXMvYmFubmVyNC5qcGcpIGNlbnRlciBuby1yZXBlYXQ7XHJcbn1cclxuXHJcbi5zbGlkZXI1e1xyXG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgwZGVnLCByZ2JhKDAsIDAsIDAsIDAuNDU5KSwgcmdiYSgwLCAwLCAwLCAwLjQyNSkpLCB1cmwoL2Fzc2V0cy9pbWFnZXMvcmVub3ZhdGlvbl9kZV9mYWNhZGUvMjQzMTQwNzA3XzQwMDc4MTE3ODI5NjQwNV81ODE1Mzk4MTE5MjY1NzA2MDM3X24uanBnKSBjZW50ZXIgbm8tcmVwZWF0O1xyXG59XHJcblxyXG5cclxucHtcclxuICBmb250LXNpemU6IDE4cHg7XHJcbiAgZm9udC13ZWlnaHQ6IDYwMDtcclxufVxyXG5cclxuLmJhbm5lci1pbmZvLWJnIGF7XHJcbiAgcGFkZGluZzogMTJweCAzNnB4O1xyXG4gIGZvbnQtc2l6ZTogMTZweDtcclxuICBsaW5lLWhlaWdodDogMjZweDtcclxuICBmb250LXdlaWdodDogNjAwO1xyXG4gIHRyYW5zaXRpb246IDAuM3MgZWFzZS1pbjtcclxuICBib3JkZXItcmFkaXVzOiA2cHg7XHJcbiAgY3Vyc29yOiBwb2ludGVyICFpbXBvcnRhbnQ7XHJcbiAgZm9udC1mYW1pbHk6ICdCYXJsb3cnLCBzYW5zLXNlcmlmO1xyXG4gIGNvbG9yOiAjZmZmO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNmZTVhMGU7XHJcbiAgYm9yZGVyLWNvbG9yOiAjZmU1YTBlO1xyXG4gIG1hcmdpbi1yaWdodDogMC41cmVtICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5idG4td2hpdGV7XHJcbiAgY29sb3I6ICAjZmU1YTBlICFpbXBvcnRhbnQ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xyXG4gIGJvcmRlci1jb2xvcjogI2ZlNWEwZSAhaW1wb3J0YW50O1xyXG59XHJcblxyXG5zZWxlY3R7XHJcbiAgd2lkdGg6IGF1dG87XHJcbiAgZGlzcGxheTogaW5saW5lLWZsZXg7XHJcbiAgbWFyZ2luLXRvcDogM3JlbSAhaW1wb3J0YW50O1xyXG4gIG1hcmdpbi1yaWdodDogMC41cmVtICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5ibG9nLWRlbWFuZGUtZGV2aXN7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gIGZsZXgtd3JhcDogbm93cmFwO1xyXG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -2228,9 +2359,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     ContactComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: ContactComponent,
       selectors: [["app-contact"]],
-      decls: 66,
+      decls: 141,
       vars: 0,
-      consts: [["name", "Contact"], ["id", "slider", 2, "margin-top", "56px"], [1, "content", "slider-1"], ["id", "content", 1, "col-sm-9", 2, "background-color", "rgba(255, 255, 255, 0.685)", "margin", "0px auto", "padding", "30px 10px"], [2, "color", "black"], [1, "panel", "panel-default"], [1, "panel-body"], [1, "row"], [1, "col-sm-4", "left"], [1, "address"], [1, "col-sm-8", "rigt"], [1, "map"], ["src", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11046.97163744175!2d6.215172189417566!3d46.195674465860726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6fd432ec967f%3A0x408ab2ae4baa630!2sAmbilly%2C%20France!5e0!3m2!1sfr!2stn!4v1638309006273!5m2!1sfr!2stn", "width", "100%", "height", "400px", "allowfullscreen", "", "loading", "lazy", 2, "border", "0"], [1, "form-horizontal"], [1, "form-group", "required"], ["for", "input-name", 1, "col-sm-2", "control-label"], [1, "col-sm-10"], ["type", "text", "id", "input-name", "value", "", "name", "name", 1, "form-control"], ["for", "input-email", 1, "col-sm-2", "control-label"], ["type", "email", "id", "input-email", "value", "", "name", "email", 1, "form-control"], ["for", "input-enquiry", 1, "col-sm-2", "control-label"], ["id", "input-enquiry", "rows", "10", "name", "enquiry", 1, "form-control"], [1, "buttons"], [1, "pull-right"], ["type", "submit", "value", "Envoyer", 1, "btn", "btn-primary"]],
+      consts: [["name", "Contact"], ["id", "slider", 2, "margin-top", "56px"], [1, "container", "slider-1"], ["id", "content", 1, "col-sm-12", 2, "background-color", "rgba(255, 255, 255, 0.685)", "margin", "0px auto", "padding", "30px 10px"], [2, "color", "black", "text-align", "center"], [1, "form-horizontal"], [1, "row"], [1, "col-sm-6"], [1, "form-group", "required"], ["for", "input-name", 1, "control-label"], [1, ""], ["type", "text", "id", "input-name", "value", "", "name", "name", 1, "form-control"], ["for", "input-email", 1, "control-label"], ["type", "email", "id", "input-email", "value", "", "name", "email", 1, "form-control"], ["for", "input-enquiry", 1, "control-label"], [1, "form-check"], ["type", "checkbox", "value", "", "id", "defaultCheck1", 1, "form-check-input"], ["for", "defaultCheck1", 1, "form-check-label"], ["id", "input-enquiry", "rows", "3", "name", "enquiry", 1, "form-control"], [1, "buttons"], [2, "text-align", "center"], ["type", "submit", "value", "Envoyer", 1, "btn", "btn-primary"], ["id", "slider", 2, "margin-top", "56px", "background-color", "rgba(0,0,0,0.05) !important"], [1, "container"], ["id", "content", 1, "col-sm-12", 2, "margin", "0px auto", "padding", "30px 10px"], ["src", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11046.97163744175!2d6.215172189417566!3d46.195674465860726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6fd432ec967f%3A0x408ab2ae4baa630!2sAmbilly%2C%20France!5e0!3m2!1sfr!2stn!4v1638309006273!5m2!1sfr!2stn", "width", "100%", "height", "400px", "allowfullscreen", "", "loading", "lazy", 2, "border", "0"], ["src", "./assets/images/Untitled-2.png", "alt", "", 1, "img-fluid"], [1, "address"]],
       template: function ContactComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-sliderpage", 0);
@@ -2241,87 +2372,323 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "h1", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "h2", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "CONTACTEZ-NOUS");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Un projet ? Une question ? ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "h3");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 5);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 7);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 8);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "address");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " Aa.concept-Renov : ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "br");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " Nous vous r\xE9pondrons ou rappellerons dans les 24 heures.");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "br");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "T\xE9l: ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "form", 5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " 06 45 35 96 66, 06 89 96 92 92 ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "br");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "br");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "label", 9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "Mail: ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Nom + Pr\xE9nom");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, " info@aaconcept-renov.com ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "input", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "label", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Adresse");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "input", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "br");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "label", 9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Adresse: ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Code postal");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, " Ambilly 74 100 ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 10);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "div", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "input", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "Pays:");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "label", 9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " France ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Ville");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 10);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "input", 11);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "iframe", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "label", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "E-Mail ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](41, "input", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](42, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "label", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "T\xE9l\xE9phone");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](47, "input", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "h4");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, "Votre projet concerne :");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](52, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, " Nettoyage & Hydrofuge de toiture et fa\xE7ade ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](56, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, " Sanitaire ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](60, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, " placo-platre ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](64, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](65, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](66, " isolation ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](67, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](68, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70, " R\xE9novation totale ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](72, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, " cloisons s\xE8ches ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](76, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](78, " rev\xEAtements de sol ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](79, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](80, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](81, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](82, " carrelage ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](83, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](84, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](85, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](86, " parquet ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](88, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](89, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](90, " peinture ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](91, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](92, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](93, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](94, " d\xE9coration ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](95, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](96, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](97, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](98, " \xE9lectricit\xE9 ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](99, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](100, "input", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "label", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](102, " Crepi ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "label", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](105, "Message");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "div", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](107, "textarea", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](108, "div", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](109, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "div", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](111, "input", 21);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2331,77 +2698,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](112, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "form", 13);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "fieldset");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "h3");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Vos informations");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "label", 15);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Nom + Pr\xE9nom");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "div", 16);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](45, "input", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "div", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "label", 18);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, "Adresse E-Mail ");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "div", 16);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](50, "input", 19);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "label", 20);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "T\xE9l\xE9phone");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "div", 16);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](55, "input", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](56, "div", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "label", 20);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, "Message");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "div", 16);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](60, "textarea", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](113, "br");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2409,21 +2708,81 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "div", 22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](114, "section", 22);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "div", 23);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](115, "div", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](63, "input", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](116, "div", 24);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](117, "div", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](118, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](119, "iframe", 25);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](120, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](121, "img", 26);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](122, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](123, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](124, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](125, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](126, "T\xE9l: ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](127, " 06 45 35 96 66, 06 89 96 92 92");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](128, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](129, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](130, "Mail: ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](131, " info@aaconcept-renov.com");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](132, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](133, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](134, "Adresse: ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](135, " Ambilly 74 100");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](136, "div", 27);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](137, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](138, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](139, "Pays:");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](140, " France");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](64, "br");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](65, "br");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2433,7 +2792,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [_components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__["SliderpageComponent"]],
-      styles: [".navbar-9[_ngcontent-%COMP%]{\r\n    float:right;\r\n    margin: 18px 22px;\r\n   \r\n    font-family: Raleway, sans-serif;\r\n    line-height: 0;\r\n    cursor: pointer;\r\n    position: relative;\r\n    z-index: 1;\r\n    text-transform: inherit !important;\r\n    color: rgb(19, 15, 255) !important;\r\n    font-size: 16px !important;\r\n    font-weight: 600 !important;\r\n    background: rgb(202, 202, 202);\r\n    padding: 22px 32px;\r\n    border-radius: 0px;\r\n    transition: color 0.4s linear 0s;\r\n    border-width: 0px;\r\n    border-style: initial;\r\n    border-color: initial;\r\n    -o-border-image: initial;\r\n       border-image: initial;\r\n    overflow: hidden;\r\n}\r\n\r\n.slider-1[_ngcontent-%COMP%]{\r\n    position: relative;\r\n}\r\n\r\n.slider-2[_ngcontent-%COMP%]{\r\n   padding: 20vw 10vw;\r\n}\r\n\r\n.slider-3[_ngcontent-%COMP%]{\r\n    background-color: #3a3af7;\r\n    padding: 20px;\r\n}\r\n\r\n.slider-4[_ngcontent-%COMP%]{\r\n    background-color: white;\r\n}\r\n\r\n.slider-3[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{\r\n    font-weight: 900;\r\n    font-size: 60px;\r\n}\r\n\r\n.slider-4[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{\r\n    color: #3a3af7;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGFjdC9jb250YWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsaUJBQWlCOztJQUVqQixnQ0FBZ0M7SUFDaEMsY0FBYztJQUNkLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsVUFBVTtJQUNWLGtDQUFrQztJQUNsQyxrQ0FBa0M7SUFDbEMsMEJBQTBCO0lBQzFCLDJCQUEyQjtJQUMzQiw4QkFBOEI7SUFDOUIsa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixnQ0FBZ0M7SUFDaEMsaUJBQWlCO0lBQ2pCLHFCQUFxQjtJQUNyQixxQkFBcUI7SUFDckIsd0JBQXFCO09BQXJCLHFCQUFxQjtJQUNyQixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7R0FDRyxrQkFBa0I7QUFDckI7O0FBRUE7SUFDSSx5QkFBeUI7SUFDekIsYUFBYTtBQUNqQjs7QUFHQTtJQUNJLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixlQUFlO0FBQ25COztBQUVBO0lBQ0ksY0FBYztBQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3QvY29udGFjdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5hdmJhci05e1xyXG4gICAgZmxvYXQ6cmlnaHQ7XHJcbiAgICBtYXJnaW46IDE4cHggMjJweDtcclxuICAgXHJcbiAgICBmb250LWZhbWlseTogUmFsZXdheSwgc2Fucy1zZXJpZjtcclxuICAgIGxpbmUtaGVpZ2h0OiAwO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgei1pbmRleDogMTtcclxuICAgIHRleHQtdHJhbnNmb3JtOiBpbmhlcml0ICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogcmdiKDE5LCAxNSwgMjU1KSAhaW1wb3J0YW50O1xyXG4gICAgZm9udC1zaXplOiAxNnB4ICFpbXBvcnRhbnQ7XHJcbiAgICBmb250LXdlaWdodDogNjAwICFpbXBvcnRhbnQ7XHJcbiAgICBiYWNrZ3JvdW5kOiByZ2IoMjAyLCAyMDIsIDIwMik7XHJcbiAgICBwYWRkaW5nOiAyMnB4IDMycHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAwcHg7XHJcbiAgICB0cmFuc2l0aW9uOiBjb2xvciAwLjRzIGxpbmVhciAwcztcclxuICAgIGJvcmRlci13aWR0aDogMHB4O1xyXG4gICAgYm9yZGVyLXN0eWxlOiBpbml0aWFsO1xyXG4gICAgYm9yZGVyLWNvbG9yOiBpbml0aWFsO1xyXG4gICAgYm9yZGVyLWltYWdlOiBpbml0aWFsO1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG5cclxuLnNsaWRlci0xe1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4uc2xpZGVyLTJ7XHJcbiAgIHBhZGRpbmc6IDIwdncgMTB2dztcclxufVxyXG5cclxuLnNsaWRlci0ze1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzNhM2FmNztcclxuICAgIHBhZGRpbmc6IDIwcHg7XHJcbn1cclxuXHJcblxyXG4uc2xpZGVyLTR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLnNsaWRlci0zIGgxe1xyXG4gICAgZm9udC13ZWlnaHQ6IDkwMDtcclxuICAgIGZvbnQtc2l6ZTogNjBweDtcclxufVxyXG5cclxuLnNsaWRlci00IGgxe1xyXG4gICAgY29sb3I6ICMzYTNhZjc7XHJcbn0iXX0= */"]
+      styles: [".navbar-9[_ngcontent-%COMP%]{\r\n    float:right;\r\n    margin: 18px 22px;\r\n   \r\n    font-family: Raleway, sans-serif;\r\n    line-height: 0;\r\n    cursor: pointer;\r\n    position: relative;\r\n    z-index: 1;\r\n    text-transform: inherit !important;\r\n    color: rgb(19, 15, 255) !important;\r\n    font-size: 16px !important;\r\n    font-weight: 600 !important;\r\n    background: rgb(202, 202, 202);\r\n    padding: 22px 32px;\r\n    border-radius: 0px;\r\n    transition: color 0.4s linear 0s;\r\n    border-width: 0px;\r\n    border-style: initial;\r\n    border-color: initial;\r\n    -o-border-image: initial;\r\n       border-image: initial;\r\n    overflow: hidden;\r\n}\r\n\r\n.slider-1[_ngcontent-%COMP%]{\r\n    position: relative;\r\n}\r\n\r\n.slider-2[_ngcontent-%COMP%]{\r\n   padding: 20vw 10vw;\r\n}\r\n\r\n.slider-3[_ngcontent-%COMP%]{\r\n    background-color: #3a3af7;\r\n    padding: 20px;\r\n}\r\n\r\n.slider-4[_ngcontent-%COMP%]{\r\n    background-color: white;\r\n}\r\n\r\n.slider-3[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{\r\n    font-weight: 900;\r\n    font-size: 60px;\r\n}\r\n\r\n.slider-4[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%]{\r\n    color: #3a3af7;\r\n}\r\n\r\np[_ngcontent-%COMP%]{\r\n    font-size: 20px;\r\n}\r\n\r\nstrong[_ngcontent-%COMP%]{\r\n    font-size: 20px;\r\n}\r\n\r\nimg[_ngcontent-%COMP%]{\r\n    height: 150px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29udGFjdC9jb250YWN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsaUJBQWlCOztJQUVqQixnQ0FBZ0M7SUFDaEMsY0FBYztJQUNkLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsVUFBVTtJQUNWLGtDQUFrQztJQUNsQyxrQ0FBa0M7SUFDbEMsMEJBQTBCO0lBQzFCLDJCQUEyQjtJQUMzQiw4QkFBOEI7SUFDOUIsa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixnQ0FBZ0M7SUFDaEMsaUJBQWlCO0lBQ2pCLHFCQUFxQjtJQUNyQixxQkFBcUI7SUFDckIsd0JBQXFCO09BQXJCLHFCQUFxQjtJQUNyQixnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7R0FDRyxrQkFBa0I7QUFDckI7O0FBRUE7SUFDSSx5QkFBeUI7SUFDekIsYUFBYTtBQUNqQjs7QUFHQTtJQUNJLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixlQUFlO0FBQ25COztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBO0lBQ0ksYUFBYTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3QvY29udGFjdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5hdmJhci05e1xyXG4gICAgZmxvYXQ6cmlnaHQ7XHJcbiAgICBtYXJnaW46IDE4cHggMjJweDtcclxuICAgXHJcbiAgICBmb250LWZhbWlseTogUmFsZXdheSwgc2Fucy1zZXJpZjtcclxuICAgIGxpbmUtaGVpZ2h0OiAwO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgei1pbmRleDogMTtcclxuICAgIHRleHQtdHJhbnNmb3JtOiBpbmhlcml0ICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogcmdiKDE5LCAxNSwgMjU1KSAhaW1wb3J0YW50O1xyXG4gICAgZm9udC1zaXplOiAxNnB4ICFpbXBvcnRhbnQ7XHJcbiAgICBmb250LXdlaWdodDogNjAwICFpbXBvcnRhbnQ7XHJcbiAgICBiYWNrZ3JvdW5kOiByZ2IoMjAyLCAyMDIsIDIwMik7XHJcbiAgICBwYWRkaW5nOiAyMnB4IDMycHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAwcHg7XHJcbiAgICB0cmFuc2l0aW9uOiBjb2xvciAwLjRzIGxpbmVhciAwcztcclxuICAgIGJvcmRlci13aWR0aDogMHB4O1xyXG4gICAgYm9yZGVyLXN0eWxlOiBpbml0aWFsO1xyXG4gICAgYm9yZGVyLWNvbG9yOiBpbml0aWFsO1xyXG4gICAgYm9yZGVyLWltYWdlOiBpbml0aWFsO1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG5cclxuLnNsaWRlci0xe1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4uc2xpZGVyLTJ7XHJcbiAgIHBhZGRpbmc6IDIwdncgMTB2dztcclxufVxyXG5cclxuLnNsaWRlci0ze1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzNhM2FmNztcclxuICAgIHBhZGRpbmc6IDIwcHg7XHJcbn1cclxuXHJcblxyXG4uc2xpZGVyLTR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLnNsaWRlci0zIGgxe1xyXG4gICAgZm9udC13ZWlnaHQ6IDkwMDtcclxuICAgIGZvbnQtc2l6ZTogNjBweDtcclxufVxyXG5cclxuLnNsaWRlci00IGgxe1xyXG4gICAgY29sb3I6ICMzYTNhZjc7XHJcbn1cclxuXHJcbnB7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbn1cclxuXHJcbnN0cm9uZ3tcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxufVxyXG5cclxuaW1ne1xyXG4gICAgaGVpZ2h0OiAxNTBweDtcclxufSJdfQ== */"]
     });
     /*@__PURE__*/
 
@@ -3587,7 +3946,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-blog2-home"]],
       decls: 48,
       vars: 0,
-      consts: [[1, "w3l-portfolio-8", "py-5"], [1, "portfolio-main", "py-md-5", "py-3"], [1, "container"], [1, "header-section", "text-center", "mx-auto"], [1, "hny-title"], [1, "my-3"], [1, "row", "galler-top", "mt-lg-5", "mt-4"], [1, "col-md-4", "protfolio-item", "hover14"], ["href", "assets/images/7.jpg", "data-lightbox", "example-set", "data-title", "lorem ipsum dolor sit amet", 1, "mb-4"], [2, "position", "relative"], ["src", "assets/images/enduit decoratif/service1.jpg", "alt", "product", 1, "img-fluid"], [1, "style-animation-image"], [1, "style-animation-text"], ["href", "assets/images/1.jpg", "data-lightbox", "example-set", "data-title", "lorem ipsum dolor sit amet", 1, "mb-md-0", "mb-4"], ["src", "assets/images/enduit decoratif/service2.jpg", "alt", "product", 1, "img-fluid"], ["href", "assets/images/2.jpg", "data-lightbox", "example-set", "data-title", "lorem ipsum dolor sit amet", 1, "mb-4"], ["src", "assets/images/nettoyage de toiture/243209429_673265273656598_3735081411463269413_n.jpg", "alt", "product", 1, "img-fluid"], ["href", "assets/images/3.jpg", "data-lightbox", "example-set", "data-title", "lorem ipsum dolor sit amet", 1, "mb-md-0", "mb-4"], ["src", "assets/images/renovation de facade/service4.jpg", "alt", "product", 1, "img-fluid"], ["href", "assets/images/4.jpg", "data-lightbox", "example-set", "data-title", "lorem ipsum dolor sit amet", 1, "mb-4"], ["src", "assets/images/nettoyage de toiture/service3.jpg", "alt", "product", 1, "img-fluid"], ["href", "assets/images/5.jpg", "data-lightbox", "example-set", "data-title", "lorem ipsum dolor sit amet"], ["src", "assets/images/renovation interieur/service5.jpg", "alt", "product", 1, "img-fluid"]],
+      consts: [[1, "w3l-portfolio-8", "py-5"], [1, "portfolio-main", "py-md-5", "py-3"], [1, "container"], [1, "header-section", "text-center", "mx-auto"], [1, "hny-title"], [1, "my-3"], [1, "row", "galler-top", "mt-lg-5", "mt-4"], [1, "col-md-4", "protfolio-item", "hover14"], ["data-lightbox", "example-set", "data-title", "lorem ipsum dolor sit amet", 1, "mb-4"], [2, "position", "relative"], ["src", "assets/images/enduit decoratif/service1.jpg", "alt", "product", 1, "img-fluid"], [1, "style-animation-image"], [1, "style-animation-text"], ["data-lightbox", "example-set", "data-title", "lorem ipsum dolor sit amet", 1, "mb-md-0", "mb-4"], ["src", "assets/images/enduit decoratif/service2.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/nettoyage de toiture/243209429_673265273656598_3735081411463269413_n.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/renovation_de_facade/service4.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/nettoyage de toiture/service3.jpg", "alt", "product", 1, "img-fluid"], ["data-lightbox", "example-set", "data-title", "lorem ipsum dolor sit amet"], ["src", "assets/images/renovation interieur/service5.jpg", "alt", "product", 1, "img-fluid"]],
       template: function Blog2HomeComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 0);
@@ -3660,11 +4019,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 8);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "figure");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "img", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "img", 15);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 11);
 
@@ -3680,11 +4039,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 13);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "figure");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "img", 18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "img", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 11);
 
@@ -3704,11 +4063,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "a", 19);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "a", 8);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "figure");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "img", 20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "img", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 11);
 
@@ -3724,11 +4083,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "a", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "a", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "figure");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](44, "img", 22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](44, "img", 19);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "div", 11);
 
@@ -5021,7 +5380,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-realisations"]],
       decls: 40,
       vars: 0,
-      consts: [["name", "R\xE9alisation"], [1, "container", 2, "padding-top", "50px", "padding-bottom", "50px"], [1, "col-12"], [1, "row"], [1, "col-sm-6", "item-realisation"], ["src", "assets/images/enduit decoratif/service1.jpg", "alt", "product", 1, "img-fluid"], [1, "style-animation-image"], [1, "style-animation-text"], ["src", "assets/images/enduit decoratif/service2.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/nettoyage de toiture/243209429_673265273656598_3735081411463269413_n.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/renovation de facade/service4.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/nettoyage de toiture/service3.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/renovation interieur/service5.jpg", "alt", "product", 1, "img-fluid"]],
+      consts: [["name", "R\xE9alisation"], [1, "container", 2, "padding-top", "50px", "padding-bottom", "50px"], [1, "col-12"], [1, "row"], [1, "col-sm-6", "item-realisation"], ["src", "assets/images/enduit decoratif/service1.jpg", "alt", "product", 1, "img-fluid"], [1, "style-animation-image"], [1, "style-animation-text"], ["src", "assets/images/enduit decoratif/service2.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/nettoyage de toiture/243209429_673265273656598_3735081411463269413_n.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/renovation_de_facade/service4.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/nettoyage de toiture/service3.jpg", "alt", "product", 1, "img-fluid"], ["src", "assets/images/renovation interieur/service5.jpg", "alt", "product", 1, "img-fluid"]],
       template: function RealisationsComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-sliderpage", 0);
@@ -5181,6 +5540,928 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/services/enduitdecoratif/enduitdecoratif.component.ts":
+  /*!***********************************************************************!*\
+    !*** ./src/app/services/enduitdecoratif/enduitdecoratif.component.ts ***!
+    \***********************************************************************/
+
+  /*! exports provided: EnduitdecoratifComponent */
+
+  /***/
+  function srcAppServicesEnduitdecoratifEnduitdecoratifComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "EnduitdecoratifComponent", function () {
+      return EnduitdecoratifComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../../components/sliderpage/sliderpage.component */
+    "./src/app/components/sliderpage/sliderpage.component.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var _c0 = function _c0() {
+      return ["/Enduit-decoratif"];
+    };
+
+    var _c1 = function _c1() {
+      return ["/Nettoyage-toiture"];
+    };
+
+    var _c2 = function _c2() {
+      return ["/Renovation-facade"];
+    };
+
+    var _c3 = function _c3() {
+      return ["/Renovation-interieur"];
+    };
+
+    var EnduitdecoratifComponent =
+    /*#__PURE__*/
+    function () {
+      function EnduitdecoratifComponent() {
+        _classCallCheck(this, EnduitdecoratifComponent);
+      }
+
+      _createClass(EnduitdecoratifComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return EnduitdecoratifComponent;
+    }();
+
+    EnduitdecoratifComponent.ɵfac = function EnduitdecoratifComponent_Factory(t) {
+      return new (t || EnduitdecoratifComponent)();
+    };
+
+    EnduitdecoratifComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: EnduitdecoratifComponent,
+      selectors: [["app-enduitdecoratif"]],
+      decls: 30,
+      vars: 8,
+      consts: [["name", "Services"], [1, "content"], [1, "row", 2, "margin", "0px"], [1, "col-sm-3", 2, "background-color", "rgba(0, 0, 0, 0.767)"], [3, "routerLink"], [1, "col-sm-9"], [2, "text-align", "center"], [1, "row"], [1, "col-lg-4", "col-md-12", "mb-4", "mb-lg-0"], ["src", "assets/images/enduit decoratif/242963312_828143791200304_4137933202361114300_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/enduit decoratif/245045517_557405018923006_8645785800294514939_n.jpg", "alt", "Wintry Mountain Landscape", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], [1, "col-lg-4", "mb-4", "mb-lg-0"], ["src", "assets/images/enduit decoratif/245052998_172726015043162_5163240498457809739_n.jpg", "alt", "Mountains in the Clouds", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/enduit decoratif/245105391_273333218006523_6755481009458264955_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/enduit decoratif/245216799_2039346669555042_1272558352253162249_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"]],
+      template: function EnduitdecoratifComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-sliderpage", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Enduit Decoratif");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Nettoyage Toiture");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Renovation Facade");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Renovation Interieur");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "h2", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Enduit Decoratif");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "img", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "img", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "img", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "img", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "img", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c0));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c1));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c2));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](7, _c3));
+        }
+      },
+      directives: [_components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__["SliderpageComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"]],
+      styles: ["ul[_ngcontent-%COMP%]{\r\n    list-style: decimal;\r\n    color: honeydew;\r\n    margin-top: 1em;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]{\r\n   \r\n   width: 100%;\r\n   text-align: center;\r\n   margin-top: 15px;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]{\r\n    padding:0px 30px;\r\n    text-align: center;\r\n    width: 100% !important;\r\n    color: honeydew;\r\n    font-weight: 700;\r\n    font-family: 'Courier New', Courier, monospace;\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(4, 109, 4), 0 0 1em rgb(9, 95, 9);\r\n }\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover{\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(6, 216, 6), 0 0 1em rgb(15, 218, 15);\r\n\r\n }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VydmljZXMvZW5kdWl0ZGVjb3JhdGlmL2VuZHVpdGRlY29yYXRpZi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0lBQ25CLGVBQWU7SUFDZixlQUFlO0FBQ25COztBQUVBOztHQUVHLFdBQVc7R0FDWCxrQkFBa0I7R0FDbEIsZ0JBQWdCO0FBQ25COztBQUVBO0lBQ0ksZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLGdCQUFnQjtJQUNoQiw4Q0FBOEM7SUFDOUMsNkVBQTZFO0NBQ2hGOztBQUVBO0lBQ0csZ0ZBQWdGOztDQUVuRiIsImZpbGUiOiJzcmMvYXBwL3NlcnZpY2VzL2VuZHVpdGRlY29yYXRpZi9lbmR1aXRkZWNvcmF0aWYuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInVse1xyXG4gICAgbGlzdC1zdHlsZTogZGVjaW1hbDtcclxuICAgIGNvbG9yOiBob25leWRldztcclxuICAgIG1hcmdpbi10b3A6IDFlbTtcclxufVxyXG5cclxudWwgbGl7XHJcbiAgIFxyXG4gICB3aWR0aDogMTAwJTtcclxuICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICBtYXJnaW4tdG9wOiAxNXB4O1xyXG59XHJcblxyXG51bCBsaSBhe1xyXG4gICAgcGFkZGluZzowcHggMzBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7XHJcbiAgICBjb2xvcjogaG9uZXlkZXc7XHJcbiAgICBmb250LXdlaWdodDogNzAwO1xyXG4gICAgZm9udC1mYW1pbHk6ICdDb3VyaWVyIE5ldycsIENvdXJpZXIsIG1vbm9zcGFjZTtcclxuICAgIHRleHQtc2hhZG93OiAxcHggMXB4IDJweCB3aGl0ZSwgMCAwIDFlbSByZ2IoNCwgMTA5LCA0KSwgMCAwIDFlbSByZ2IoOSwgOTUsIDkpO1xyXG4gfVxyXG5cclxuIHVsIGxpIGE6aG92ZXJ7XHJcbiAgICB0ZXh0LXNoYWRvdzogMXB4IDFweCAycHggd2hpdGUsIDAgMCAxZW0gcmdiKDYsIDIxNiwgNiksIDAgMCAxZW0gcmdiKDE1LCAyMTgsIDE1KTtcclxuXHJcbiB9Il19 */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](EnduitdecoratifComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-enduitdecoratif',
+          templateUrl: './enduitdecoratif.component.html',
+          styleUrls: ['./enduitdecoratif.component.css']
+        }]
+      }], function () {
+        return [];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/services/nettoyagetoiture/nettoyagetoiture.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/services/nettoyagetoiture/nettoyagetoiture.component.ts ***!
+    \*************************************************************************/
+
+  /*! exports provided: NettoyagetoitureComponent */
+
+  /***/
+  function srcAppServicesNettoyagetoitureNettoyagetoitureComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NettoyagetoitureComponent", function () {
+      return NettoyagetoitureComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../../components/sliderpage/sliderpage.component */
+    "./src/app/components/sliderpage/sliderpage.component.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var _c0 = function _c0() {
+      return ["/Enduit-decoratif"];
+    };
+
+    var _c1 = function _c1() {
+      return ["/Nettoyage-toiture"];
+    };
+
+    var _c2 = function _c2() {
+      return ["/Renovation-facade"];
+    };
+
+    var _c3 = function _c3() {
+      return ["/Renovation-interieur"];
+    };
+
+    var NettoyagetoitureComponent =
+    /*#__PURE__*/
+    function () {
+      function NettoyagetoitureComponent() {
+        _classCallCheck(this, NettoyagetoitureComponent);
+      }
+
+      _createClass(NettoyagetoitureComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return NettoyagetoitureComponent;
+    }();
+
+    NettoyagetoitureComponent.ɵfac = function NettoyagetoitureComponent_Factory(t) {
+      return new (t || NettoyagetoitureComponent)();
+    };
+
+    NettoyagetoitureComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: NettoyagetoitureComponent,
+      selectors: [["app-nettoyagetoiture"]],
+      decls: 41,
+      vars: 8,
+      consts: [["name", "Services"], [1, "content"], [1, "row", 2, "margin", "0px"], [1, "col-sm-3", 2, "background-color", "rgba(0, 0, 0, 0.767)"], [3, "routerLink"], [1, "col-sm-9"], [2, "text-align", "center"], [1, "row"], [1, "col-lg-4", "col-md-12", "mb-4", "mb-lg-0"], ["src", "assets/images/nettoyage de toiture/242963312_386119546547489_3670760419349480541_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/243113873_222495623206371_2321874364698643264_n.jpg", "alt", "Wintry Mountain Landscape", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/243209429_673265273656598_3735081411463269413_n.jpg", "alt", "Mountains in the Clouds", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/243529151_1077987913015353_5278394926116661356_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245048409_576237576954694_2150104398141491063_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245051897_1188330798321346_8860901168198335740_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], [1, "col-lg-4", "mb-4", "mb-lg-0"], ["src", "assets/images/nettoyage de toiture/245054737_268500888502555_3309443269232755976_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245055764_1024556734762800_656663447056091079_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245057579_581810533264877_3996289314027631986_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245073136_930107897713852_4411981918757320031_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245075906_1079154612837072_688406560433268482_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245078783_394357845473840_3781199504103532978_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245094812_562966885030523_1037788564888580515_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245225141_1061364324632117_3612475433739087047_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245413415_617881972717448_6042871495913891_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/nettoyage de toiture/245532348_1826107537592478_4401664391926898567_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"]],
+      template: function NettoyagetoitureComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-sliderpage", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Enduit Decoratif");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Nettoyage Toiture");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Renovation Facade");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Renovation Interieur");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "h2", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Nettoyage Toiture");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "img", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "img", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "img", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "img", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "img", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "img", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "img", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "img", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "img", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "img", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](34, "img", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "img", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](37, "img", 22);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "img", 23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "img", 24);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "img", 25);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c0));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c1));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c2));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](7, _c3));
+        }
+      },
+      directives: [_components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__["SliderpageComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"]],
+      styles: ["ul[_ngcontent-%COMP%]{\r\n    list-style: decimal;\r\n    color: honeydew;\r\n    margin-top: 1em;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]{\r\n   \r\n   width: 100%;\r\n   text-align: center;\r\n   margin-top: 15px;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]{\r\n    padding:0px 30px;\r\n    text-align: center;\r\n    width: 100% !important;\r\n    color: honeydew;\r\n    font-weight: 700;\r\n    font-family: 'Courier New', Courier, monospace;\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(4, 109, 4), 0 0 1em rgb(9, 95, 9);\r\n }\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover{\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(6, 216, 6), 0 0 1em rgb(15, 218, 15);\r\n\r\n }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VydmljZXMvbmV0dG95YWdldG9pdHVyZS9uZXR0b3lhZ2V0b2l0dXJlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7SUFDbkIsZUFBZTtJQUNmLGVBQWU7QUFDbkI7O0FBRUE7O0dBRUcsV0FBVztHQUNYLGtCQUFrQjtHQUNsQixnQkFBZ0I7QUFDbkI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLHNCQUFzQjtJQUN0QixlQUFlO0lBQ2YsZ0JBQWdCO0lBQ2hCLDhDQUE4QztJQUM5Qyw2RUFBNkU7Q0FDaEY7O0FBRUE7SUFDRyxnRkFBZ0Y7O0NBRW5GIiwiZmlsZSI6InNyYy9hcHAvc2VydmljZXMvbmV0dG95YWdldG9pdHVyZS9uZXR0b3lhZ2V0b2l0dXJlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ1bHtcclxuICAgIGxpc3Qtc3R5bGU6IGRlY2ltYWw7XHJcbiAgICBjb2xvcjogaG9uZXlkZXc7XHJcbiAgICBtYXJnaW4tdG9wOiAxZW07XHJcbn1cclxuXHJcbnVsIGxpe1xyXG4gICBcclxuICAgd2lkdGg6IDEwMCU7XHJcbiAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgbWFyZ2luLXRvcDogMTVweDtcclxufVxyXG5cclxudWwgbGkgYXtcclxuICAgIHBhZGRpbmc6MHB4IDMwcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB3aWR0aDogMTAwJSAhaW1wb3J0YW50O1xyXG4gICAgY29sb3I6IGhvbmV5ZGV3O1xyXG4gICAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICAgIGZvbnQtZmFtaWx5OiAnQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2U7XHJcbiAgICB0ZXh0LXNoYWRvdzogMXB4IDFweCAycHggd2hpdGUsIDAgMCAxZW0gcmdiKDQsIDEwOSwgNCksIDAgMCAxZW0gcmdiKDksIDk1LCA5KTtcclxuIH1cclxuXHJcbiB1bCBsaSBhOmhvdmVye1xyXG4gICAgdGV4dC1zaGFkb3c6IDFweCAxcHggMnB4IHdoaXRlLCAwIDAgMWVtIHJnYig2LCAyMTYsIDYpLCAwIDAgMWVtIHJnYigxNSwgMjE4LCAxNSk7XHJcblxyXG4gfSJdfQ== */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NettoyagetoitureComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-nettoyagetoiture',
+          templateUrl: './nettoyagetoiture.component.html',
+          styleUrls: ['./nettoyagetoiture.component.css']
+        }]
+      }], function () {
+        return [];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/services/renovationfacade/renovationfacade.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/services/renovationfacade/renovationfacade.component.ts ***!
+    \*************************************************************************/
+
+  /*! exports provided: RenovationfacadeComponent */
+
+  /***/
+  function srcAppServicesRenovationfacadeRenovationfacadeComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "RenovationfacadeComponent", function () {
+      return RenovationfacadeComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../../components/sliderpage/sliderpage.component */
+    "./src/app/components/sliderpage/sliderpage.component.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var _c0 = function _c0() {
+      return ["/Enduit-decoratif"];
+    };
+
+    var _c1 = function _c1() {
+      return ["/Nettoyage-toiture"];
+    };
+
+    var _c2 = function _c2() {
+      return ["/Renovation-facade"];
+    };
+
+    var _c3 = function _c3() {
+      return ["/Renovation-interieur"];
+    };
+
+    var RenovationfacadeComponent =
+    /*#__PURE__*/
+    function () {
+      function RenovationfacadeComponent() {
+        _classCallCheck(this, RenovationfacadeComponent);
+      }
+
+      _createClass(RenovationfacadeComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return RenovationfacadeComponent;
+    }();
+
+    RenovationfacadeComponent.ɵfac = function RenovationfacadeComponent_Factory(t) {
+      return new (t || RenovationfacadeComponent)();
+    };
+
+    RenovationfacadeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: RenovationfacadeComponent,
+      selectors: [["app-renovationfacade"]],
+      decls: 41,
+      vars: 8,
+      consts: [["name", "Services"], [1, "content"], [1, "row", 2, "margin", "0px"], [1, "col-sm-3", 2, "background-color", "rgba(0, 0, 0, 0.767)"], [3, "routerLink"], [1, "col-sm-9"], [2, "text-align", "center"], [1, "row"], [1, "col-lg-4", "col-md-12", "mb-4", "mb-lg-0"], ["src", "assets/images/renovation_de_facade/243140707_400781178296405_5815398119265706037_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245039451_561469238271921_2742018048788782285_n.jpg", "alt", "Wintry Mountain Landscape", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/244991470_2886372838293298_2509868276961887530_n.jpg", "alt", "Mountains in the Clouds", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245053511_1958642014290771_5304853573811692574_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245075909_946834919203377_587260765702211649_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245092992_304055711123061_7657800286937282275_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], [1, "col-lg-4", "mb-4", "mb-lg-0"], ["src", "assets/images/renovation_de_facade/245105389_994905357744183_5901856726215735777_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245138666_262940392424454_8053330746784004184_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245209008_2969508559977847_8533214740092095960_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245242470_1402839066804720_672242354373824123_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245301239_159679363036521_7087410465663812608_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245353796_3038887689691474_8994383024846244517_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245422645_367898588351248_5875173887744013258_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245491496_400749785008296_6937018892890031754_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/IMG-20211010-WA0004.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation_de_facade/245312369_427081118837360_628618179676255964_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"]],
+      template: function RenovationfacadeComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-sliderpage", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Enduit Decoratif");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Nettoyage Toiture");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Renovation Facade");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Renovation Interieur");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "h2", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Renovation Facade");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "img", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "img", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "img", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "img", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "img", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "img", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "img", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "img", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "img", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "img", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](34, "img", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "img", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](37, "img", 22);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "img", 23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "img", 24);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "img", 25);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c0));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c1));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c2));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](7, _c3));
+        }
+      },
+      directives: [_components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__["SliderpageComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"]],
+      styles: ["ul[_ngcontent-%COMP%]{\r\n    list-style: decimal;\r\n    color: honeydew;\r\n    margin-top: 1em;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]{\r\n   \r\n   width: 100%;\r\n   text-align: center;\r\n   margin-top: 15px;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]{\r\n    padding:0px 30px;\r\n    text-align: center;\r\n    width: 100% !important;\r\n    color: honeydew;\r\n    font-weight: 700;\r\n    font-family: 'Courier New', Courier, monospace;\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(4, 109, 4), 0 0 1em rgb(9, 95, 9);\r\n }\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover{\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(6, 216, 6), 0 0 1em rgb(15, 218, 15);\r\n\r\n }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VydmljZXMvcmVub3ZhdGlvbmZhY2FkZS9yZW5vdmF0aW9uZmFjYWRlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7SUFDbkIsZUFBZTtJQUNmLGVBQWU7QUFDbkI7O0FBRUE7O0dBRUcsV0FBVztHQUNYLGtCQUFrQjtHQUNsQixnQkFBZ0I7QUFDbkI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLHNCQUFzQjtJQUN0QixlQUFlO0lBQ2YsZ0JBQWdCO0lBQ2hCLDhDQUE4QztJQUM5Qyw2RUFBNkU7Q0FDaEY7O0FBRUE7SUFDRyxnRkFBZ0Y7O0NBRW5GIiwiZmlsZSI6InNyYy9hcHAvc2VydmljZXMvcmVub3ZhdGlvbmZhY2FkZS9yZW5vdmF0aW9uZmFjYWRlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ1bHtcclxuICAgIGxpc3Qtc3R5bGU6IGRlY2ltYWw7XHJcbiAgICBjb2xvcjogaG9uZXlkZXc7XHJcbiAgICBtYXJnaW4tdG9wOiAxZW07XHJcbn1cclxuXHJcbnVsIGxpe1xyXG4gICBcclxuICAgd2lkdGg6IDEwMCU7XHJcbiAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgbWFyZ2luLXRvcDogMTVweDtcclxufVxyXG5cclxudWwgbGkgYXtcclxuICAgIHBhZGRpbmc6MHB4IDMwcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB3aWR0aDogMTAwJSAhaW1wb3J0YW50O1xyXG4gICAgY29sb3I6IGhvbmV5ZGV3O1xyXG4gICAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICAgIGZvbnQtZmFtaWx5OiAnQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2U7XHJcbiAgICB0ZXh0LXNoYWRvdzogMXB4IDFweCAycHggd2hpdGUsIDAgMCAxZW0gcmdiKDQsIDEwOSwgNCksIDAgMCAxZW0gcmdiKDksIDk1LCA5KTtcclxuIH1cclxuXHJcbiB1bCBsaSBhOmhvdmVye1xyXG4gICAgdGV4dC1zaGFkb3c6IDFweCAxcHggMnB4IHdoaXRlLCAwIDAgMWVtIHJnYig2LCAyMTYsIDYpLCAwIDAgMWVtIHJnYigxNSwgMjE4LCAxNSk7XHJcblxyXG4gfSJdfQ== */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](RenovationfacadeComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-renovationfacade',
+          templateUrl: './renovationfacade.component.html',
+          styleUrls: ['./renovationfacade.component.css']
+        }]
+      }], function () {
+        return [];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/services/renovationinterieur/renovationinterieur.component.ts":
+  /*!*******************************************************************************!*\
+    !*** ./src/app/services/renovationinterieur/renovationinterieur.component.ts ***!
+    \*******************************************************************************/
+
+  /*! exports provided: RenovationinterieurComponent */
+
+  /***/
+  function srcAppServicesRenovationinterieurRenovationinterieurComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "RenovationinterieurComponent", function () {
+      return RenovationinterieurComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! ../../components/sliderpage/sliderpage.component */
+    "./src/app/components/sliderpage/sliderpage.component.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var _c0 = function _c0() {
+      return ["/Enduit-decoratif"];
+    };
+
+    var _c1 = function _c1() {
+      return ["/Nettoyage-toiture"];
+    };
+
+    var _c2 = function _c2() {
+      return ["/Renovation-facade"];
+    };
+
+    var _c3 = function _c3() {
+      return ["/Renovation-interieur"];
+    };
+
+    var RenovationinterieurComponent =
+    /*#__PURE__*/
+    function () {
+      function RenovationinterieurComponent() {
+        _classCallCheck(this, RenovationinterieurComponent);
+      }
+
+      _createClass(RenovationinterieurComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return RenovationinterieurComponent;
+    }();
+
+    RenovationinterieurComponent.ɵfac = function RenovationinterieurComponent_Factory(t) {
+      return new (t || RenovationinterieurComponent)();
+    };
+
+    RenovationinterieurComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: RenovationinterieurComponent,
+      selectors: [["app-renovationinterieur"]],
+      decls: 34,
+      vars: 8,
+      consts: [["name", "Services"], [1, "content"], [1, "row", 2, "margin", "0px"], [1, "col-sm-3", 2, "background-color", "rgba(0, 0, 0, 0.767)"], [3, "routerLink"], [1, "col-sm-9"], [2, "text-align", "center"], [1, "row"], [1, "col-lg-4", "col-md-12", "mb-4", "mb-lg-0"], ["src", "assets/images/renovation interieur/245032708_1196679287497810_1289846761921114913_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation interieur/245036773_252012653551589_7981291383659713207_n.jpg", "alt", "Wintry Mountain Landscape", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], [1, "col-lg-4", "mb-4", "mb-lg-0"], ["src", "assets/images/renovation interieur/245061118_251887790204884_3987748038000271492_n.jpg", "alt", "Mountains in the Clouds", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation interieur/245111445_561406048301043_7208869307182391713_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation interieur/245244474_169965721974848_6225583639261440387_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation interieur/245277748_626447242071413_7792198939603740170_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation interieur/jbnjknjkn.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/renovation interieur/245496903_638787930619688_1940978214046299345_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"]],
+      template: function RenovationinterieurComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-sliderpage", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Enduit Decoratif");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Nettoyage Toiture");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Renovation Facade");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Renovation Interieur");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "h2", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Renovation Interieur");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "img", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "img", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "img", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "img", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "img", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "img", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "img", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "img", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c0));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c1));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c2));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](7, _c3));
+        }
+      },
+      directives: [_components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__["SliderpageComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"]],
+      styles: ["ul[_ngcontent-%COMP%]{\r\n    list-style: decimal;\r\n    color: honeydew;\r\n    margin-top: 1em;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]{\r\n   \r\n   width: 100%;\r\n   text-align: center;\r\n   margin-top: 15px;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]{\r\n    padding:0px 30px;\r\n    text-align: center;\r\n    width: 100% !important;\r\n    color: honeydew;\r\n    font-weight: 700;\r\n    font-family: 'Courier New', Courier, monospace;\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(4, 109, 4), 0 0 1em rgb(9, 95, 9);\r\n }\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover{\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(6, 216, 6), 0 0 1em rgb(15, 218, 15);\r\n\r\n }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VydmljZXMvcmVub3ZhdGlvbmludGVyaWV1ci9yZW5vdmF0aW9uaW50ZXJpZXVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxtQkFBbUI7SUFDbkIsZUFBZTtJQUNmLGVBQWU7QUFDbkI7O0FBRUE7O0dBRUcsV0FBVztHQUNYLGtCQUFrQjtHQUNsQixnQkFBZ0I7QUFDbkI7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLHNCQUFzQjtJQUN0QixlQUFlO0lBQ2YsZ0JBQWdCO0lBQ2hCLDhDQUE4QztJQUM5Qyw2RUFBNkU7Q0FDaEY7O0FBRUE7SUFDRyxnRkFBZ0Y7O0NBRW5GIiwiZmlsZSI6InNyYy9hcHAvc2VydmljZXMvcmVub3ZhdGlvbmludGVyaWV1ci9yZW5vdmF0aW9uaW50ZXJpZXVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJ1bHtcclxuICAgIGxpc3Qtc3R5bGU6IGRlY2ltYWw7XHJcbiAgICBjb2xvcjogaG9uZXlkZXc7XHJcbiAgICBtYXJnaW4tdG9wOiAxZW07XHJcbn1cclxuXHJcbnVsIGxpe1xyXG4gICBcclxuICAgd2lkdGg6IDEwMCU7XHJcbiAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgbWFyZ2luLXRvcDogMTVweDtcclxufVxyXG5cclxudWwgbGkgYXtcclxuICAgIHBhZGRpbmc6MHB4IDMwcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB3aWR0aDogMTAwJSAhaW1wb3J0YW50O1xyXG4gICAgY29sb3I6IGhvbmV5ZGV3O1xyXG4gICAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICAgIGZvbnQtZmFtaWx5OiAnQ291cmllciBOZXcnLCBDb3VyaWVyLCBtb25vc3BhY2U7XHJcbiAgICB0ZXh0LXNoYWRvdzogMXB4IDFweCAycHggd2hpdGUsIDAgMCAxZW0gcmdiKDQsIDEwOSwgNCksIDAgMCAxZW0gcmdiKDksIDk1LCA5KTtcclxuIH1cclxuXHJcbiB1bCBsaSBhOmhvdmVye1xyXG4gICAgdGV4dC1zaGFkb3c6IDFweCAxcHggMnB4IHdoaXRlLCAwIDAgMWVtIHJnYig2LCAyMTYsIDYpLCAwIDAgMWVtIHJnYigxNSwgMjE4LCAxNSk7XHJcblxyXG4gfSJdfQ== */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](RenovationinterieurComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-renovationinterieur',
+          templateUrl: './renovationinterieur.component.html',
+          styleUrls: ['./renovationinterieur.component.css']
+        }]
+      }], function () {
+        return [];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
   "./src/app/services/services.component.ts":
   /*!************************************************!*\
     !*** ./src/app/services/services.component.ts ***!
@@ -5211,6 +6492,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! ../components/sliderpage/sliderpage.component */
     "./src/app/components/sliderpage/sliderpage.component.ts");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+    var _c0 = function _c0() {
+      return ["/Enduit-decoratif"];
+    };
+
+    var _c1 = function _c1() {
+      return ["/Nettoyage-toiture"];
+    };
+
+    var _c2 = function _c2() {
+      return ["/Renovation-facade"];
+    };
+
+    var _c3 = function _c3() {
+      return ["/Renovation-interieur"];
+    };
 
     var ServicesComponent =
     /*#__PURE__*/
@@ -5234,16 +6537,128 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     ServicesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: ServicesComponent,
       selectors: [["app-services"]],
-      decls: 1,
-      vars: 0,
-      consts: [["name", "Services"]],
+      decls: 30,
+      vars: 8,
+      consts: [["name", "Services"], [1, "content"], [1, "row", 2, "margin", "0px"], [1, "col-sm-3", 2, "background-color", "rgba(0, 0, 0, 0.767)"], [3, "routerLink"], [1, "col-sm-9"], [2, "text-align", "center"], [1, "row"], [1, "col-lg-4", "col-md-12", "mb-4", "mb-lg-0"], ["src", "assets/images/enduit decoratif/242963312_828143791200304_4137933202361114300_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/enduit decoratif/245045517_557405018923006_8645785800294514939_n.jpg", "alt", "Wintry Mountain Landscape", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], [1, "col-lg-4", "mb-4", "mb-lg-0"], ["src", "assets/images/enduit decoratif/245052998_172726015043162_5163240498457809739_n.jpg", "alt", "Mountains in the Clouds", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/enduit decoratif/245105391_273333218006523_6755481009458264955_n.jpg", "alt", "Boat on Calm Water", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"], ["src", "assets/images/enduit decoratif/245216799_2039346669555042_1272558352253162249_n.jpg", "alt", "Waves at Sea", 1, "w-100", "shadow-1-strong", "rounded", "mb-4"]],
       template: function ServicesComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-sliderpage", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ul");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Enduit Decoratif");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Nettoyage Toiture");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Renovation Facade");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Renovation Interieur");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "h2", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Enduit Decoratif");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "img", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "img", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "img", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "img", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "img", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c0));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c1));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c2));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](7, _c3));
         }
       },
-      directives: [_components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__["SliderpageComponent"]],
-      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NlcnZpY2VzL3NlcnZpY2VzLmNvbXBvbmVudC5jc3MifQ== */"]
+      directives: [_components_sliderpage_sliderpage_component__WEBPACK_IMPORTED_MODULE_1__["SliderpageComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"]],
+      styles: ["ul[_ngcontent-%COMP%]{\r\n    list-style: decimal;\r\n    color: honeydew;\r\n    margin-top: 1em;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]{\r\n   \r\n   width: 100%;\r\n   text-align: center;\r\n   margin-top: 15px;\r\n}\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]{\r\n    padding:0px 30px;\r\n    text-align: center;\r\n    width: 100% !important;\r\n    color: honeydew;\r\n    font-weight: 700;\r\n    font-family: 'Courier New', Courier, monospace;\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(4, 109, 4), 0 0 1em rgb(9, 95, 9);\r\n }\r\n\r\nul[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover{\r\n    text-shadow: 1px 1px 2px white, 0 0 1em rgb(6, 216, 6), 0 0 1em rgb(15, 218, 15);\r\n\r\n }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VydmljZXMvc2VydmljZXMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLG1CQUFtQjtJQUNuQixlQUFlO0lBQ2YsZUFBZTtBQUNuQjs7QUFFQTs7R0FFRyxXQUFXO0dBQ1gsa0JBQWtCO0dBQ2xCLGdCQUFnQjtBQUNuQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixrQkFBa0I7SUFDbEIsc0JBQXNCO0lBQ3RCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsOENBQThDO0lBQzlDLDZFQUE2RTtDQUNoRjs7QUFFQTtJQUNHLGdGQUFnRjs7Q0FFbkYiLCJmaWxlIjoic3JjL2FwcC9zZXJ2aWNlcy9zZXJ2aWNlcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidWx7XHJcbiAgICBsaXN0LXN0eWxlOiBkZWNpbWFsO1xyXG4gICAgY29sb3I6IGhvbmV5ZGV3O1xyXG4gICAgbWFyZ2luLXRvcDogMWVtO1xyXG59XHJcblxyXG51bCBsaXtcclxuICAgXHJcbiAgIHdpZHRoOiAxMDAlO1xyXG4gICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgIG1hcmdpbi10b3A6IDE1cHg7XHJcbn1cclxuXHJcbnVsIGxpIGF7XHJcbiAgICBwYWRkaW5nOjBweCAzMHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcclxuICAgIGNvbG9yOiBob25leWRldztcclxuICAgIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbiAgICBmb250LWZhbWlseTogJ0NvdXJpZXIgTmV3JywgQ291cmllciwgbW9ub3NwYWNlO1xyXG4gICAgdGV4dC1zaGFkb3c6IDFweCAxcHggMnB4IHdoaXRlLCAwIDAgMWVtIHJnYig0LCAxMDksIDQpLCAwIDAgMWVtIHJnYig5LCA5NSwgOSk7XHJcbiB9XHJcblxyXG4gdWwgbGkgYTpob3ZlcntcclxuICAgIHRleHQtc2hhZG93OiAxcHggMXB4IDJweCB3aGl0ZSwgMCAwIDFlbSByZ2IoNiwgMjE2LCA2KSwgMCAwIDFlbSByZ2IoMTUsIDIxOCwgMTUpO1xyXG5cclxuIH0iXX0= */"]
     });
     /*@__PURE__*/
 
